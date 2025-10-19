@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f8f4ec;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00796b;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(to right, #f8f4ec, #f1ede4);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #00796b;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #004d40;
+      transform: scale(1.05);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      color: #222;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1rem;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .service {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .service h3 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      margin-bottom: 20px;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00796b;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #fff;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Empowering Your Digital Presence</h1>
+      <p>We craft modern websites and meaningful content that help your brand grow and stand out.</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </header>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+
+    <div class="service">
+      <h3>Web Design</h3>
+      <p>Beautiful, responsive, and user-friendly websites tailored to your brand’s identity.</p>
+      <a href="#contact" class="btn">Learn More</a>
+    </div>
+
+    <div class="service">
+      <h3>Content Creation</h3>
+      <p>Engaging written and visual content designed to connect and convert your audience.</p>
+      <a href="#contact" class="btn">Get Details</a>
+    </div>
+
+    <div class="service">
+      <h3>Digital Strategy</h3>
+      <p>We help you build a strong online presence with data-driven growth strategies.</p>
+      <a href="#contact" class="btn">Explore</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="submit_form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We’re a passionate creative agency focused on building powerful online experiences for businesses of all sizes.  
+    Our goal is simple — to combine creativity and strategy to help brands thrive in the digital world.</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 My Landing Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>
